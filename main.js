@@ -11,14 +11,12 @@ var logcolor2 = ('background-color: #005656; color: white; border-radius: 0px 4p
 
 if ('MediaMetadata' in window) {
     // 支持 MediaMetadata API
-    var mmda = 0;
     console.log(`%clog:%c浏览器支持媒体控件`, logcolor1, logcolor2);
     console.log(`%clog:%cThe browser supports the MediaMetadata API`, logcolor1, logcolor2);
     console.log(`%clog:%c您可以愉快的使用媒体控件方便的操作此播放器啦！`, logcolor1, logcolor2);
     console.log(`%clog:%cYou can enjoy using the media controls to operate this player conveniently!`, logcolor1, logcolor2);
 } else {
     // 不支持 MediaMetadata API
-    var mmda = 1;
     console.log(`%clog:%c浏览器不支持媒体控件`, logcolor1, logcolor2);
     console.log(`%clog:%cThe MediaMetadata API is not supported by browsers`, logcolor1, logcolor2);
     console.error('您的浏览器内核已被区别对待，因为不支持媒体控件代码导致妨碍javascript继续运行');
@@ -62,16 +60,16 @@ function PlayPause() {
     if (!audio.paused) {
         audio.pause();
 
-        if ( mmda = 0 ) {navigator.mediaSession.playbackState = 'paused';}
+        if ( 'MediaMetadata' in window ) {navigator.mediaSession.playbackState = 'paused';}
     }
     else {
         audio.play();
 
-        if ( mmda = 0 ) {navigator.mediaSession.playbackState = 'playing';}
+        if ( 'MediaMetadata' in window ) {navigator.mediaSession.playbackState = 'playing';}
     }
 }
 playToggle.addEventListener('click', PlayPause);
-if ( mmda = 0 ) {
+if ( 'MediaMetadata' in window ) {
     navigator.mediaSession.setActionHandler('play', PlayPause);
     navigator.mediaSession.setActionHandler('pause', PlayPause);
 }
@@ -161,7 +159,7 @@ function nextSong() {
     }
 }
 next.addEventListener('click', nextSong);
-if ( mmda = 0 ) { navigator.mediaSession.setActionHandler('nexttrack', nextSong); }
+if ( 'MediaMetadata' in window ) { navigator.mediaSession.setActionHandler('nexttrack', nextSong); }
 
 //on prev
 var count = playlist.length;
@@ -176,7 +174,7 @@ function prevSong() {
     }
 }
 prev.addEventListener('click', prevSong);
-if ( mmda = 0 ) { navigator.mediaSession.setActionHandler('previoustrack', prevSong); }
+if ( 'MediaMetadata' in window ) { navigator.mediaSession.setActionHandler('previoustrack', prevSong); }
 
 VerlyRange("seekslider", "#655ecf");
 VerlyRange("volumeslider", "#eb3992");
