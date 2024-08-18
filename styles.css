@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -16,12 +16,38 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 100vh;
+}
+
+.backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://a2942.net:5902/tp/PC/");
+  background-size: contain; /* 背景铺满 */
+  background-repeat: no-repeat;
+  background-position: center; /* 背景居中 */
+  z-index: -1; /* 确保背景在最底层 */
+}
+.backgroundsdiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://a2942.net:5902/tp/PC/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; /* 背景居中 */
+  filter: blur(10px); /* 背景模糊化 */
+  z-index: -2; /* 确保背景在最底层 */
 }
 
 .player {
@@ -30,11 +56,13 @@ body {
   height: 450px;
   border: 1px solid #eaeaea;
   -webkit-box-shadow: 0.3px 0.3px 5px;
-          box-shadow: 0.3px 0.3px 5px;
+  box-shadow: 0.3px 0.3px 5px;
+  background-color: #fff;
 }
 
 .background {
-  background: url(./background.jpg) no-repeat;
+  /* background: url(./background.jpg) no-repeat; */
+  /* background: url(http://a2942.net:5902/tp/) no-repeat; */
   height: 300px;
   background-size: 100%;
 }
@@ -44,11 +72,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.4);
   height: 300px;
 }
@@ -58,14 +86,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .seeker input {
@@ -122,14 +150,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   font-size: 35px;
 }
 
@@ -140,4 +168,5 @@ body {
 canvas {
   display: block;
 }
+
 /*# sourceMappingURL=styles.css.map */
