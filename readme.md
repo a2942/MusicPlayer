@@ -17,7 +17,7 @@
 <ol>
   <li>下载本项目</li>
   <li>在 <b>sounds</b> 放入你的音乐🎵文件</li>
-  <li>运行 <b><i>updateplaylist.sh</i></b> 更新 playlist.txt </li>
+  <li>运行 <b><i>updateplaylist.sh</i></b> 更新 playlist.js </li>
   <li>在浏览器打开 index.html </li>
 </ol>
 
