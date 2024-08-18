@@ -6,7 +6,7 @@
 **一切开发旨在学习，请勿用于非法用途**
 
 ### 在线尝试
-<a href="http://a2942.net:5902/musicplayer/" target="_blank">http://a2942.net:5902/musicplayer/</a>
+<a href="http://a2942.net:5902/github/musicplayer/" target="_blank">http://a2942.net:5902/github/musicplayer/</a>
 
 ### 新增支持的功能
 <ol>
