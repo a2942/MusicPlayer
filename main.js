@@ -72,6 +72,8 @@ playToggle.addEventListener('click', PlayPause);
 if ( 'MediaMetadata' in window ) {
     navigator.mediaSession.setActionHandler('play', PlayPause);
     navigator.mediaSession.setActionHandler('pause', PlayPause);
+    navigator.mediaSession.setActionHandler('previoustrack', prevSong);
+    navigator.mediaSession.setActionHandler('nexttrack', nextSong);
 }
 
 //manual seeking
@@ -159,7 +161,6 @@ function nextSong() {
     }
 }
 next.addEventListener('click', nextSong);
-if ( 'MediaMetadata' in window ) { navigator.mediaSession.setActionHandler('nexttrack', nextSong); }
 
 //on prev
 var count = playlist.length;
@@ -174,7 +175,6 @@ function prevSong() {
     }
 }
 prev.addEventListener('click', prevSong);
-if ( 'MediaMetadata' in window ) { navigator.mediaSession.setActionHandler('previoustrack', prevSong); }
 
 VerlyRange("seekslider", "#655ecf");
 VerlyRange("volumeslider", "#eb3992");
